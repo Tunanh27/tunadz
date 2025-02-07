@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="photo.html">Hình Ảnh</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+    </nav>
+    <h1>Thông tin liên hệ</h1>
+    <div class="contact-form">
+        <label for="facebook">Facebook:</label>
+        <input type="text" id="facebook" placeholder="Nhập link Facebook của bạn">
+        <button onclick="submitFacebook()">Gửi</button>
+    </div>
+    <div class="contact-form">
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" placeholder="Nhập địa chỉ Gmail của bạn">
+        <button onclick="submitGmail()">Gửi</button>
+    </div>
+    <script>
+        function submitFacebook() {
+            let fbLink = document.getElementById('facebook').value;
+            if(fbLink) {
+                alert('Bạn đã nhập link Facebook: ' + fbLink);
+            } else {
+                alert('Vui lòng nhập link Facebook!');
+            }
+        }
+        function submitGmail() {
+            let gmail = document.getElementById('gmail').value;
+            if(gmail) {
+                alert('Bạn đã nhập Gmail: ' + gmail);
+            } else {
+                alert('Vui lòng nhập Gmail!');
+            }
+        }
+    </script>
+</body>
+</html>
